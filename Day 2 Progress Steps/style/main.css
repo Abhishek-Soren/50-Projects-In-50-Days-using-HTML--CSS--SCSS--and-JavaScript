@@ -1,15 +1,87 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  background-color: #f6f7fb;
+  font-family: "Nunito", sans-serif;
   margin: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+.container-progress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+.container-progress::before {
+  content: "";
+  background-color: rgb(253, 199, 208);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -2;
+}
+.container-progress .progress {
+  background-color: rgb(252, 98, 124);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+.container-progress .circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(253, 199, 208);
+  transition: 0.4s ease;
+}
+.container-progress .circle.active {
+  border-color: rgb(252, 98, 124);
+}
+.container .btn {
+  background-color: rgb(252, 98, 124);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+.container .btn:active {
+  transform: scale(0.98);
+}
+.container .btn:focus {
+  outline: 0;
+}
+.container .btn:disabled {
+  background-color: rgb(253, 199, 208);
+  cursor: not-allowed;
+  transform: scale(1);
 }

@@ -9,10 +9,22 @@
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style/main.css" />
-    <title></title>
+    <title>Progress Steps</title>
   </head>
   <body>
-    <!-- code -->
+    <div class="container">
+      <div class="container-progress">
+        <div class="progress" id="progress"></div>
+        <div class="circle active">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle">4</div>
+      </div>
+
+      <button class="btn" id="previous" disabled>Prev</button>
+      <button class="btn" id="next">Next</button>
+
+    </div>
 
     <script src="./script/script.js" async defer></script>
   </body>

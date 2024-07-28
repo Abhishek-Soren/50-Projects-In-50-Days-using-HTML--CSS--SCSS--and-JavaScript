@@ -1,2 +1,80 @@
 @import "./base";
 @import "./mixins";
+
+.container {
+  text-align: center;
+
+  &-progress {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+
+    &::before {
+      content: "";
+      background-color: color(secondary);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 100%;
+      z-index: -2;
+    }
+
+    .progress {
+      background-color: color(primary);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 0%;
+      z-index: -1;
+      transition: 0.4s ease;
+    }
+
+    .circle {
+      background-color: #fff;
+      color: #999;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      @include flex-center;
+      border: 3px solid color(secondary);
+      transition: 0.4s ease;
+
+      &.active {
+        border-color: color(primary);
+      }
+    }
+  }
+
+  .btn {
+    background-color: color(primary);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:disabled {
+      background-color: color(secondary);
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+  }
+}
