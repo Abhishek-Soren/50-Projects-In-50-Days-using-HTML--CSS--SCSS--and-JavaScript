@@ -1,6 +1,4 @@
-$('#readme').insertBefore('.file-navigation');
-
-# 50 Projects In 50 Days using HTML, CSS, SCSS, and JavaScript
+# 50 Projects In 50 Days using HTML, CSS(SCSS), and JavaScript
 
 This repository contains 50 mini-projects developed over the course of 50 days using HTML, CSS, SCSS, and JavaScript. Each project focuses on a specific aspect of web development, providing hands-on practice and learning.
 
@@ -20,8 +18,3 @@ This repository contains 50 mini-projects developed over the course of 50 days u
 
 ## Getting Started
 
-To get a local copy up and running, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/50-Projects-In-50-Days.git
