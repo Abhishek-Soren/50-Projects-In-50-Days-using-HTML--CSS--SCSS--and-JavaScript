@@ -1,3 +1,5 @@
+$('#readme').insertBefore('.file-navigation');
+
 # 50 Projects In 50 Days using HTML, CSS, SCSS, and JavaScript
 
 This repository contains 50 mini-projects developed over the course of 50 days using HTML, CSS, SCSS, and JavaScript. Each project focuses on a specific aspect of web development, providing hands-on practice and learning.
