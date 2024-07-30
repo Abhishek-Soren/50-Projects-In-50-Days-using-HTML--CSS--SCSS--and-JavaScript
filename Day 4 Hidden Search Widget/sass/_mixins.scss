@@ -1,0 +1,26 @@
+@mixin response($break-point) {
+  @if ($break-point == xl) {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if ($break-point == lg) {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  } @else if ($break-point == md) {
+    @media (max-width: 750px) {
+      @content;
+    }
+  } @else if ($break-point == sm) {
+    @media (max-width: 550px) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+
+  justify-content: $justify;
+  align-items: $align;
+}

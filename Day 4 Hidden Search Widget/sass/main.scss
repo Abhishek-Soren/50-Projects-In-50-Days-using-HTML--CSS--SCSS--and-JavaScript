@@ -1,0 +1,51 @@
+@import "./base";
+@import "./mixins";
+
+%dimensions {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search {
+  position: relative;
+  height: 50px;
+
+  &.active {
+    .input {
+      width: 300px;
+    }
+
+    .btn {
+      transform: translateX(250px);
+    }
+  }
+
+  .input {
+    background-color: color(secondary);
+    border: 0;
+    font-size: 20px;
+    padding: 15px;
+    @extend %dimensions;
+    transition: width 0.3s ease;
+  }
+
+  .btn {
+    background-color: color(secondary);
+    color: color(tertiary);
+
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @extend %dimensions;
+
+    transition: transform 0.3s ease;
+  }
+}
