@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+@import "./mixins";
+
+$colors: (
+  primary: rgb(255, 70, 85),
+  secondary: rgb(236, 232, 225),
+  tertiary: rgb(26, 36, 46)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  @include flex-center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
