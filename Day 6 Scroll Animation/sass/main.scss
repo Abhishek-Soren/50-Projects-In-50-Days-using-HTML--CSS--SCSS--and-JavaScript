@@ -1,0 +1,33 @@
+@import "./base";
+@import "./mixins";
+
+h1 {
+  font-size: 60px;
+  color: color(tertiary);
+}
+
+.box {
+  width: 400px;
+  height: 200px;
+  @include flex-center;
+  background-color: color(primary);
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow:
+    color(tertiary) 0px 30px 60px -12px inset,
+    color(tertiary) 0px 18px 36px -18px inset;
+  transform: translateX(300%);
+  transition: transform 0.5s ease;
+
+  h2 {
+    font-size: 40px;
+  }
+
+  &:nth-child(even) {
+    transform: translateX(-300%);
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+}
