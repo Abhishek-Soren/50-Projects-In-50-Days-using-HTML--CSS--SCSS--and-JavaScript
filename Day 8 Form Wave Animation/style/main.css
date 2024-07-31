@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #0575e6;
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 40px;
+}
+.container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container form .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  background-color: #0575e6;
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: all 0.3s;
+}
+.container form .btn:hover {
+  background-color: #56acb8;
+}
+.container form .btn:active {
+  transform: scale(0.98);
+}
+.container form .text {
+  margin-top: 30px;
+}
+.container form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container form a {
+  text-decoration: none;
+  color: #fc466b;
+}
+.container form .form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+.container form .form-control input {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #0575e6 solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 20px;
+  transition: all 0.3s;
+  z-index: 100;
+}
+.container form .form-control input:focus, .container form .form-control input:valid {
+  outline: none;
+  border-bottom: 2px #00f260 solid;
+}
+.container form .form-control input:focus + label span, .container form .form-control input:valid + label span {
+  color: #00f260;
+  transform: translateY(-30px);
+}
+.container form .form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  cursor: text;
+}
+.container form .form-control label span {
+  display: inline-block;
+  font-size: 20px;
+  min-width: 4px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

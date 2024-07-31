@@ -1,0 +1,93 @@
+@import "./base";
+@import "./mixins";
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 40px;
+
+  form {
+    @include flex-center;
+    flex-direction: column;
+    .btn {
+      @include flex-center;
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+      background-color: #0575e6;
+      height: 50px;
+      width: 200px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #56acb8;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    .text {
+      margin-top: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fc466b;
+    }
+
+    .form-control {
+      position: relative;
+      margin: 20px 0 40px;
+      width: 300px;
+
+      input {
+        position: relative;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px #0575e6 solid;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 20px;
+        transition: all 0.3s;
+        z-index: 100;
+
+        &:focus,
+        &:valid {
+          outline: none;
+          border-bottom: 2px #00f260 solid;
+
+          & + label span {
+            color: #00f260;
+            transform: translateY(-30px);
+          }
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        cursor: text;
+
+        span {
+          display: inline-block;
+          font-size: 20px;
+          min-width: 4px;
+
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+      }
+    }
+  }
+}

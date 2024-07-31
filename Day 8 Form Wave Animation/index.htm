@@ -4,16 +4,36 @@
     <meta charset="utf-8" />
     <meta name="author" content="Abhishek Soren" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style/main.css" />
-    <title></title>
+    <title>Form Wave Animation</title>
   </head>
   <body>
-    <!-- code -->
+    <div class="container">
+      <h1>Please Login</h1>
+      <form>
+        <div class="form-control">
+          <input type="text" required />
+          <label>Email</label>
+        </div>
+        <div class="form-control">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
 
+        <button class="btn">Login</button>
+        <p class="text">
+          Don't have an Account?
+          <a href="#">Register</a>
+        </p>
+      </form>
+    </div>
     <script src="./script/script.js" async defer></script>
   </body>
 </html>
