@@ -1,0 +1,114 @@
+@import "./base";
+@import "./mixins";
+
+$hover-width: 70%;
+$other-width: 30%;
+
+%before-content {
+  transition: all 0.8s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    @include size;
+
+    opacity: 0.6;
+  }
+}
+
+.wrapper {
+  position: relative;
+  @include size;
+  background-color: #333;
+
+  .split {
+    position: absolute;
+    @include size(100%, 50%);
+
+    overflow: hidden;
+  }
+
+  &-text {
+    @include size;
+    @include flex-center;
+    flex-direction: column;
+    position: relative;
+
+    &-heading {
+      font-size: 4rem;
+      font-weight: 600;
+      white-space: nowrap;
+      margin-bottom: 20px;
+
+      @include response(md) {
+        font-size: 2rem;
+      }
+    }
+
+    &-btn {
+      height: 50px;
+      width: 200px;
+      border: 2px solid color(secondary);
+      border-radius: 10px;
+      @include flex-center;
+      text-decoration: none;
+      outline: none;
+      color: color(secondary);
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      @include response(md) {
+        font-size: 0.8rem;
+        height: 35px;
+        width: 150px;
+      }
+
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &-left {
+    left: 0;
+    background: no-repeat center center/cover url(../assets/valorant.jpg);
+    &::before {
+      background-color: color(primary);
+    }
+    @extend %before-content;
+
+    .wrapper-text-btn:hover {
+      background-color: color(secondary);
+      color: color(primary);
+    }
+  }
+
+  &-right {
+    right: 0;
+    background: no-repeat center center/cover url(../assets/once-human.jpg);
+    &::before {
+      background-color: color(tertiary);
+    }
+    @extend %before-content;
+
+    .wrapper-text-btn:hover {
+      background-color: color(secondary);
+      color: color(tertiary);
+    }
+  }
+}
+
+.hover-left {
+  & .wrapper-left {
+    width: $hover-width;
+  }
+  & .wrapper-right {
+    width: $other-width;
+  }
+}
+
+.hover-right {
+  & .wrapper-right {
+    width: $hover-width;
+  }
+  & .wrapper-left {
+    width: $other-width;
+  }
+}
